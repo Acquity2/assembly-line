@@ -26,7 +26,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
 
     local conf = fluidInterface.getFluidInterfaceConfiguration(1)
     local cellLabel = recipeFluid[1]
-    local fluidLabel = recipeFluid.cname
+    local fluidLabel = recipeFluid.fluidLabel
     --配置与配方不一样或者没有
     if not conf or conf.label ~= fluidLabel then
         --set all config the same
@@ -47,6 +47,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         end
 
         while true do
+            --bottom = 0,top = 1
             local fluid = fluidInput.getFluidInTank(0, 1)
             if fluid and fluid.label == fluidLabel then
                 break

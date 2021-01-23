@@ -17,26 +17,38 @@ function _M.match(sourceItems)
             else
                 source[label] = v.size
             end
-        --else
-        --    break
         end
     end
 
     for _, v in pairs(r) do
         local flag = true
-        for __, item in pairs(v.items) do
+        for i, item in pairs(v.items) do
             local sourceAmount = source[item[1]]
             if item.type ~= "fluid" and (not sourceAmount or item.amount > sourceAmount) then
                 flag = false
                 break
             end
+            -- will transfer this slot first
+            item.slot = i
         end
 
         if flag then
             print("matched recipe:" .. v.nickname)
-            return v
+            return _M.copyTable(v)
         end
     end
+end
+
+function _M.copyTable(table)
+    local result = {}
+    if type(table) == "table" then
+        for k, v in pairs(table) do
+            result[_M.copyTable(k)] = _M.copyTable(v)
+        end
+    else
+        result = table
+    end
+    return result
 end
 
 return _M

@@ -11,6 +11,8 @@ local chestSourceSide = ci.chestSourceSide
 local chestOutputSide = ci.chestOutputSide
 local moltenOutputSide = ci.moltenOutputSide
 
+local rememberSlot = 1
+
 function _M.transFluid(recipeFluid, inputBusSlot)
     local fluidInput = _M.getFluidProxyBySlot(inputBusSlot)
     if not fluidInput then
@@ -67,23 +69,23 @@ function _M.transFluid(recipeFluid, inputBusSlot)
 end
 
 function _M.trans2melt(recipeItem)
-    _M.trans(recipeItem[1], recipeItem.amount, moltenOutputSide)
+    _M.trans(recipeItem, moltenOutputSide)
 end
 
 function _M.transItem(recipeItem)
-    _M.trans(recipeItem[1], recipeItem.amount, chestOutputSide)
+    _M.trans(recipeItem, chestOutputSide)
 end
 
 function _M.transCell(recipeItem, fluidSlot)
     --cell到熔物品的超级缸输出缓冲
-    _M.trans(recipeItem[1], recipeItem.amount, moltenOutputSide)
+    _M.trans(recipeItem, moltenOutputSide)
 end
 
-function _M.trans(label, amount, outputSide)
-    local sourceSlots = _M.getSlotByLabel(label, amount, chestSourceSide)
+function _M.trans(recipeItem, outputSide)
+    local sourceSlots = _M.getSlotByLabel(recipeItem[1], recipeItem.amount, chestSourceSide)
     local outputSlot = _M.getAvailableOutputSlot(outputSide)
     for _, v in ipairs(sourceSlots) do
-        local transferred = inputProxy.transferItem(chestSourceSide, outputSide, v.size, v.slot, outputSlot)
+        inputProxy.transferItem(chestSourceSide, outputSide, v.size, v.slot, outputSlot)
     end
     --if transferred < amount then
     --    error("not enough item:" .. label .. " " .. tostring(amount - transferred) .. " more")

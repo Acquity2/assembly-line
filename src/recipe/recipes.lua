@@ -25,7 +25,7 @@ R[2] = {
         { "细钌铱合金导线", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, label = "fluid.lubricant" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" }
     }
 }
 
@@ -69,9 +69,8 @@ R[5] = {
         { "gt.metaitem.01.25374.name", type = ITEM, amount = 32 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 },
-        --TODO 修改为MOLTEN
-        { "gt.metaitem.99.635.name", type = FLUID, amount = 1440, label = "fluid.molten.styrenebutadienerubber" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" },
+        { "gt.metaitem.99.635.name", type = FLUID, amount = 1440, cname = "fluid.molten.styrenebutadienerubber" }
     }
 }
 
@@ -259,6 +258,7 @@ R[17] = {
         { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
         { "gt.metaitem.01.30724.name", type = FLUID, amount = 750 },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, label = "fluid.lubricant" },
         { "gt.metaitem.99.635.name", type = FLUID, amount = 2880, label = "fluid.molten.styrenebutadienerubber" }
     }
 }
@@ -569,6 +569,100 @@ R[36] = {
         { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, label = "fluid.molten.solderingalloy" }
     }
 }
+
+R[37] = {
+    nickname = "Neuro Processing Unit",
+    items = {
+        { "gt.metaitem.03.32105.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32073.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32023.name", type = ITEM, amount = 16 },
+        { "gt.blockmachines.gt_pipe_polybenzimidazole_tiny.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.02.18320.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.29635.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.01.26374.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.01.30609.name", type = FLUID, amount = 250, cname = "fluid.growthmediumsterilized" },
+        { "UuMatter Cell", type = FLUID, amount = 250, cname = "UU-Matter" },
+        { "Coolant Cell", type = FLUID, amount = 1000, cname = "IC2 Coolant" }
+    }
+}
+
+R[38] = {
+    nickname = "Wetware Mainframe (UHV)",
+    items = {
+        { "gt.blockmachines.gt_frame_tritanium.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32094.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32147.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32027.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32024.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32026.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32025.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32039.name", type = ITEM, amount = 48 },
+        { "gt.blockmachines.wire.superconductorzpm.02.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29471.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" },
+        { "Coolant Cell", type = FLUID, amount = 10000, cname = "IC2 Coolant" },
+        { "gt.metaitem.01.30093.name", type = FLUID, amount = 2500, cname = "fluid.radon" }
+    }
+}
+
+R[39] = {
+    nickname = "Field Generator (UHV)",
+    items = {
+        { "gt.blockmachines.gt_frame_neutronium.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17129.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.32726.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.32687.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32095.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "fluid.molten.solderingalloy" }
+    }
+}
+
+R[40] = {
+    nickname = "Electric Motor (UHV)",
+    items = {
+        { "gt.metaitem.02.22399.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.22982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.28982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.25982.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" }
+    }
+}
+
+R[41] = {
+    nickname = "Electric Pump (UHV)",
+    items = {
+        { "gt.metaitem.01.32596.name", type = ITEM, amount = 1 },
+        { "gt.blockmachines.gt_pipe_neutronium_large.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.17982.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.27982.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.01.28471.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.02.21982.name", type = ITEM, amount = 4 },
+        { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" }
+    }
+}
+
 
 function _M.getRecipes()
     return R
